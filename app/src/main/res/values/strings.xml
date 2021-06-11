@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Identity</string>
+    <string name="text_step1"> Шаг 1/2 </string>
+    <string name="text_step2"> Шаг 2/2 </string>
+    <string name="text_step1_results"> Ваши данные</string>
+    <string name="text_identity">Идентификация</string>
+    <string name="text_scan">Отсканируйте документ </string>
+    <string name="text_select">или выберите в галереи</string>
+    <string name="text_camera">Камера</string>
+    <string name="text_gallery">Галерея</string>
+    <string name="text_next">Далее</string>
+    <string name="text_doc_type">Тип документа</string>
+    <string name="text_doc_type_passport">Паспорт</string>
+    <string name="text_doc_valid">Действительный</string>
+    <string name="text_doc_id">Серия и номер</string>
+    <string name="text_doc_issuedate">Дата выдачи</string>
+    <string name="text_doc_duedate">Дата истечения сроки</string>
+    <string name="text_doc_months">Месяцев до окончания сроки</string>
+    <string name="text_doc_organization">Орган выдавший документ</string>
+    <string name="text_doc_name">Имя</string>
+    <string name="text_doc_surname">Фамилия</string>
+    <string name="text_doc_fathername">Отчество</string>
+    <string name="text_doc_country">Страна выдачи</string>
+    <string name="text_doc_countrycode">Код страны выдачи</string>
+    <string name="text_doc_nationality">Национальность</string>
+    <string name="text_doc_nationalitycode">Код национальности</string>
+    <string name="text_doc_age">Возраст</string>
+    <string name="text_doc_sex">Пол</string>
+    <string name="text_doc_birthdate">Дата рождения</string>
+    <string name="text_doc_birthplace">Место рождения</string>
+    <string name="text_liveness">Liveness</string>
+    <string name="text_last_step">Пройдите последний шаг</string>
+    <string name="text_check_success">Поздравляем! Личность подтверждена</string>
+    <string name="text_check_fail">Проверка провалена :(</string>
+    <string name="text_check_pass">Вы прошли идентификацию</string>
+    <string name="text_check_similarity">Процент совпадения:</string>
+    <string name="text_end_process">Завершить процесс</string>
+    <string name="text_retry">Повторить попытку</string>
+    <string name="text_perform_nfc">Выполните чтение чипа NFC</string>
+</resources>

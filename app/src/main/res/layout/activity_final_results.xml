@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:id="@+id/results_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/icon_success"/>
+
+    <TextView
+        android:id="@+id/results_text_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_check_success"
+        android:textAppearance="@style/style_text_identity"
+        android:paddingTop="20dp"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/results_text_similarity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/results_text_similarity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_check_similarity"
+            android:textAppearance="@style/style_text_scan_or_select"
+            android:padding="20dp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/results_text_similarity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90.5%"
+            android:textAppearance="@style/style_text_scan_or_select"
+            android:padding="10dp"
+            android:background="@color/dark_green"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/results_text_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_check_pass"
+        android:textAppearance="@style/style_text_scan_or_select"
+        android:padding="10dp"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/results_layout_retry"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/rectangle_oval_fill"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/results_button_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_oval_fill"
+                android:text="@string/text_retry"
+                android:layout_gravity="center"
+                android:textAppearance="@style/style_button_text_white"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/results_layout_finish"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/rectangle_oval_fill"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp">
+            <Button
+                android:id="@+id/results_button_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_oval_fill"
+                android:text="@string/text_end_process"
+                android:layout_gravity="center"
+                android:textAppearance="@style/style_button_text_white"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

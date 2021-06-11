@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/step1_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="@string/text_step1"
+        android:textAppearance="@style/style_text_step"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/rectangle"/>
+
+    <ImageView
+        android:id="@+id/step1_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/icon_step1_photo"/>
+
+
+
+    <TextView
+        android:id="@+id/step1_text_identity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_identity"
+        android:textAppearance="@style/style_text_identity"
+        android:paddingTop="20dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/step1_text_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_scan"
+        android:textAppearance="@style/style_text_scan_or_select"
+        android:paddingTop="20dp"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/text_perform_nfc"
+            android:id="@+id/doRfidCb"/>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/rectangle_oval_fill"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp">
+            <Button
+                android:id="@+id/step1_button_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_oval_fill"
+                android:text="@string/text_camera"
+                android:drawableLeft="@drawable/icon_camera"
+                android:layout_gravity="center"
+                android:textAppearance="@style/style_button_text_white"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
