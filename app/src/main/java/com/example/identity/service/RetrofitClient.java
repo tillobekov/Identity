@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
     private static Retrofit retrofit = null;
+    private static Retrofit retrofitVisionLab = null;
 
     public static Retrofit getClient(String url){
         if(retrofit == null){
@@ -15,5 +16,15 @@ public class RetrofitClient {
         }
 
         return retrofit;
+    }
+
+    public static Retrofit getClientVisionLab(String url){
+        if(retrofitVisionLab == null){
+            retrofitVisionLab = new Retrofit.Builder().baseUrl(url)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+
+        return retrofitVisionLab;
     }
 }

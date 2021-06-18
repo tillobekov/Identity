@@ -25,6 +25,7 @@
         android:paddingTop="20dp"
         android:gravity="center_horizontal" />
 
+
     <LinearLayout
         android:id="@+id/results_text_similarity_layout"
         android:layout_width="match_parent"
