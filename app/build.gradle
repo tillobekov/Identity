@@ -6,13 +6,18 @@ android {
 
     allprojects{
         repositories{
+
             maven {
                 url "http://maven.regulaforensics.com/RegulaDocumentReader"
             }
+            //maven {
+            //    url "http://maven.regulaforensics.com/RegulaDocumentReader"
+            //}
 
-            maven {
-                url "http://maven.regulaforensics.com/RegulaDocumentReader/Beta"
-            }
+
+           // maven {
+           //     url "http://maven.regulaforensics.com/RegulaDocumentReader/Beta"
+          //  }
 
         }
     }

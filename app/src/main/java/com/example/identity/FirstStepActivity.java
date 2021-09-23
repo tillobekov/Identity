@@ -24,7 +24,7 @@ import com.example.identity.model.DocumentReaderResponse;
 import com.example.identity.service.APIUtils;
 import com.example.identity.service.DocumentReaderService;
 import com.example.identity.util.Util;
-import com.regula.facesdk.enums.eInputFaceType;
+//import com.regula.facesdk.enums.eInputFaceType;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Serializable;
@@ -160,7 +160,7 @@ public class FirstStepActivity extends AppCompatActivity {
             if(requestCode == PICK_IMAGE){
                 imageUri = data.getData();
                 imageView.setImageURI(imageUri);
-                imageView.setTag(eInputFaceType.ift_DocumentPrinted);
+                //imageView.setTag(eInputFaceType.ift_DocumentPrinted);
 //            textViewValidity.setText("Validity: null");
 //            textViewInfo.setText("Data: null");
             }else if (requestCode == REQUEST_IMAGE_CAPTURE){

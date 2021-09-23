@@ -30,9 +30,11 @@ import com.example.identity.service.FaceSDKService;
 import com.example.identity.service.MultipartUtility;
 import com.example.identity.service.VisionLabsService;
 import com.example.identity.util.Util;
-import com.regula.facesdk.Face;
+//import com.regula.facesdk.Face;
+import com.regula.facesdk.FaceSDK;
 import com.regula.facesdk.configuration.LivenessConfiguration;
-import com.regula.facesdk.enums.eInputFaceType;
+import com.regula.facesdk.enums.LivenessStatus;
+//import com.regula.facesdk.enums.eInputFaceType;
 
 import org.json.JSONObject;
 
@@ -117,18 +119,24 @@ public class SecondStepActivity extends AppCompatActivity {
 
         if(r && !v){
 
-            LivenessConfiguration configuration = new LivenessConfiguration.Builder().setCameraSwitchEnabled(true).build();
+            //LivenessConfiguration configuration = new LivenessConfiguration.Builder().setCameraSwitchEnabled(true).build();
 
             Intent intent = getIntent();
             int type = intent.getIntExtra("type", 0);
             byte[] portrait = intent.getByteArrayExtra("portrait");
 
-            Face.Instance().startLiveness(SecondStepActivity.this, configuration, livenessResponse -> {
+            LivenessConfiguration configuration = new LivenessConfiguration.Builder()
+                    .setCameraId(0)
+                    .setCameraSwitchEnabled(true)
+                    .build();
+
+            FaceSDK.Instance().startLiveness(SecondStepActivity.this, configuration, livenessResponse -> {
+                // ... check livenessResponse.liveness for detection result.
                 if (livenessResponse != null && livenessResponse.getBitmap() != null) {
                     imageView.setImageBitmap(livenessResponse.getBitmap());
-                    imageView.setTag(eInputFaceType.ift_Live);
+                    //imageView.setTag(eInputFaceType.ift_Live);
 
-                    if (livenessResponse.liveness == 0) {
+                    if (livenessResponse.getLiveness() == LivenessStatus.PASSED) {
 
                         initDialog = showDialog("Face Processing");
 
@@ -147,8 +155,34 @@ public class SecondStepActivity extends AppCompatActivity {
                     Toast.makeText(SecondStepActivity.this, "Liveness: null", Toast.LENGTH_SHORT).show();
                     startResultActivity(false, false, 0.0, type);
                 }
-
             });
+
+//            Face.Instance().startLiveness(SecondStepActivity.this, configuration, livenessResponse -> {
+//                if (livenessResponse != null && livenessResponse.getBitmap() != null) {
+//                    imageView.setImageBitmap(livenessResponse.getBitmap());
+//                    imageView.setTag(eInputFaceType.ift_Live);
+//
+//                    if (livenessResponse.liveness == 0) {
+//
+//                        initDialog = showDialog("Face Processing");
+//
+//                        Toast.makeText(SecondStepActivity.this, "Liveness: passed", Toast.LENGTH_SHORT).show();
+//                        if(type == 1){
+//                            matchFaces2(portrait, livenessResponse.getBitmap());
+//                        }else if(type == 2){
+//                            matchFaces(livenessResponse.getBitmap());
+//                        }
+//
+//                    } else {
+//                        Toast.makeText(SecondStepActivity.this, "Liveness: unknown", Toast.LENGTH_SHORT).show();
+//                        startResultActivity(false, false, 0.0, type);
+//                    }
+//                } else {
+//                    Toast.makeText(SecondStepActivity.this, "Liveness: null", Toast.LENGTH_SHORT).show();
+//                    startResultActivity(false, false, 0.0, type);
+//                }
+//
+//            });
 
         }else if(!r && v){
             ContentValues values = new ContentValues();
