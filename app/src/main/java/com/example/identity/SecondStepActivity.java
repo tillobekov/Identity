@@ -106,7 +106,7 @@ public class SecondStepActivity extends AppCompatActivity {
 
         buttonCamera.setOnClickListener(v -> {
             //buttonCamera.setEnabled(false);
-            startLiveness(false,true);
+            startLiveness(true,false);
         });
 //
 //        buttonFinish.setOnClickListener(v -> {
